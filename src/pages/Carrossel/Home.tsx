@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
 import Modal from "../../components/Moda";
 import { ProjetoContainer } from "../Home/styles";
@@ -14,11 +14,31 @@ interface ProjetoProps {
 }
 
 const ImageSlider: React.FC<ProjetoProps> = ({ slides }) => {
+
+  const [slidesToShow, setSlidesToShow] = useState<number>(1);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 671) {
+        setSlidesToShow(1);
+      } else if (window.innerWidth < 990){
+        setSlidesToShow(2)
+      } 
+      else {
+        setSlidesToShow(3); // ajuste este número conforme necessário
+      }
+    };
+
+    handleResize(); // verifique a largura da janela quando o componente for montado
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const settings = {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: slidesToShow,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
@@ -60,9 +80,9 @@ const ImageSlider: React.FC<ProjetoProps> = ({ slides }) => {
       </Slider>
       {
         isOpen ?
-          <Modal 
+          <Modal
             callback={handleModalClose}
-          info={tituloModal}
+            info={tituloModal}
           ></Modal>
           :
           null

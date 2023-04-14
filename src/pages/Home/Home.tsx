@@ -58,8 +58,8 @@ const Home = () => {
                 <Paragrafo size={40} >Guilherme Lincoln</Paragrafo>
                 <Paragrafo>Olá! Eu sou desenvolvedor Front-end com 1+ anos de experiência. Tenho experiência atuando em projetos utilizando o Framework Flutter com a linguagem Dart e a biblioteca React, com as linguagens Javascript e Typescript.</Paragrafo>
                 <ContainerIcons>
-                    <a href="#" onClick={handleLinkedin}><BsGithub size={30} /></a>
-                    <a href="#" onClick={handleGithub}><BsLinkedin size={30} /></a>
+                    <a href="#" onClick={handleGithub}><BsGithub size={30} /></a>
+                    <a href="#" onClick={handleLinkedin}><BsLinkedin size={30} /></a>
                 </ContainerIcons>
                 <SliderContainer>
                     <ImageSlider
