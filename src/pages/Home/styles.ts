@@ -11,13 +11,13 @@ export const Fundo = styled.div`
     justify-content: center;
     align-items: center;
 
-    background-color: black;
+    background-color: #181717;
 
     height: 100vh;
     width: 100vw;
 
     font-size: 20px;
-    color: white;
+    color: #FFFFFF;
 
     overflow: hidden;
 
@@ -40,11 +40,13 @@ export const Header = styled.div`
 `
 
 export const ContainerCentral = styled.div`
+
+    position: relative;
     
     padding: 20px;
 
     height: 70vh;
-    width: 70vw;
+    width: 1200px;
     
     border: 2px solid white;
     
@@ -59,5 +61,54 @@ export const ContainerIcons = styled.div`
     padding-top: 20px;
     margin-right: 20px;
     padding-right: 20px;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+
+        margin-left: 20px;
+    }
     
+`
+
+export const ProjetoContainer = styled.div`
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    text-align: center;
+
+    position: relative;
+
+    height: 300px;
+    width: 300px;
+
+    border: 2px solid white;
+
+    background-color: black;
+
+    h2 {
+        margin-bottom: 40px;
+    }
+    
+
+`
+
+export const SliderContainer = styled.div`
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    
+
+    background-color: black;
+
+    width: 100%;
+
+    box-sizing: border-box;
+    margin-top: 100px;
+    padding: 20px;
+
+    border: 2px solid white;
 `
