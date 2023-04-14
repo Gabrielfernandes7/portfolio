@@ -1,1 +1,1 @@
-# Meu portifólio com alguns projetos. v1.
+# My portfolio with some projects :)

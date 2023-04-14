@@ -92,6 +92,13 @@ export const ProjetoContainer = styled.div`
     h2 {
         margin-bottom: 40px;
     }
+
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+
+    :hover {
+        background-color: #6b6a6a;
+    }
     
 
 `
