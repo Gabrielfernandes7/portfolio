@@ -33,6 +33,15 @@ export const ModalStyle = styled.div`
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+
+    @media (max-width: 850px) {
+        width: 425px;
+    }
+
+    @media (max-width: 850px) {
+        padding-bottom: 40px;
+    }
+    
 `
 
 export const Actionbutton = styled.button`
@@ -53,6 +62,8 @@ export const Actionbutton = styled.button`
 `
 
 export const Span = styled.span`
+    @media (max-width: 870px) {
+    }
 `
 
 export const DivInfo = styled.div`
@@ -63,6 +74,8 @@ export const DivInfo = styled.div`
 
     margin-bottom: 30px;
     margin-right: 10px;
+
+    
 
 `
 
@@ -84,4 +97,14 @@ export const CloseModal = styled.div`
     justify-content: center;
 
     cursor: pointer;
+`
+
+export const Paragrafo = styled.p`
+    margin-bottom: 150px;
+    font-size: 32px;
+
+    @media (max-width: 969px) {
+        margin-top: 50px;
+        
+    }
 `

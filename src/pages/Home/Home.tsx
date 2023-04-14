@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { ContainerCentral, ContainerIcons, Fundo, Header, Paragrafo, ProjetoContainer, SliderContainer } from './styles'
+import { ContainerCentral, ContainerIcons, Fundo, H4, Header, Paragrafo, ProjetoContainer, SliderContainer } from './styles'
 import { useNavigate, Link } from 'react-router-dom';
 
 // assets
@@ -50,9 +50,9 @@ const Home = () => {
     return (
         <Fundo>
             <Header>
+                <H4>Projetos</H4>
                 <h4>Home</h4>
-                <h4>Projetos</h4>
-                <h4>Portifólio</h4>
+                <H4>Portfólio</H4>
             </Header>
             <ContainerCentral>
                 <Paragrafo size={40} >Guilherme Lincoln</Paragrafo>

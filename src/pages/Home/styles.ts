@@ -37,6 +37,18 @@ export const Header = styled.div`
     width: 100%;
 
     top: 0;
+
+    text-align: center;
+
+    h4 {
+        text-align: center;
+    }
+`
+
+export const H4 = styled.h4`
+    @media (max-width: 816px) {
+        visibility: hidden;
+    }
 `
 
 export const ContainerCentral = styled.div`

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Actionbutton, CloseModal, DivInfo, FundoModal, ModalStyle, Span } from './Modalstyle'
+import { Actionbutton, CloseModal, DivInfo, FundoModal, ModalStyle, Paragrafo, Span } from './Modalstyle'
 
 interface modal {
     titulo: string
@@ -64,7 +64,7 @@ const Modal = ({ info, callback }: modalProps) => {
                 {
                     info === "Oficinas 4.0" ?
                         <div style={{ textAlign: "center" }}>
-                            <p style={{ marginBottom: 200, fontSize: 35 }}>{info}</p>
+                            <Paragrafo>{info}</Paragrafo>
                             {oficinas.map((infoDescription, index) => (
                                 <DivInfo key={index} style={{ width: "100%" }} >
                                     <Span key={index}>{infoDescription.titulo}</Span>
@@ -76,7 +76,7 @@ const Modal = ({ info, callback }: modalProps) => {
                 {
                     info === "Carrinho bluetooth" ?
                         <div style={{ textAlign: "center" }}>
-                            <p style={{ marginBottom: 200, fontSize: 35 }}>{info}</p>
+                            <Paragrafo>{info}</Paragrafo>
                             {carrinho.map((infoDescription, index) => (
                                 <DivInfo key={index} style={{ width: "100%" }} >
                                     <Span key={index}>{infoDescription.titulo}</Span>
@@ -88,7 +88,7 @@ const Modal = ({ info, callback }: modalProps) => {
                 {
                     info === "Projeto Adelco" ?
                         <div style={{ textAlign: "center" }}>
-                            <p style={{ marginBottom: 200, fontSize: 35 }}>{info}</p>
+                            <Paragrafo>{info}</Paragrafo>
                             {adelco.map((infoDescription, index) => (
                                 <DivInfo key={index} style={{ width: "100%" }} >
                                     <Span key={index}>{infoDescription.titulo}</Span>
@@ -100,7 +100,7 @@ const Modal = ({ info, callback }: modalProps) => {
                 {
                     info === "Lit" ?
                         <div style={{ textAlign: "center" }}>
-                            <p style={{ marginBottom: 200, fontSize: 35 }}>{info}</p>
+                            <Paragrafo>{info}</Paragrafo>
                             {lit.map((infoDescription, index) => (
                                 <DivInfo key={index} style={{ width: "100%" }} >
                                     <Span key={index}>{infoDescription.titulo}</Span>
