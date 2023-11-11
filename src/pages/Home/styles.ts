@@ -11,6 +11,9 @@ export const Fundo = styled.div`
     justify-content: center;
     align-items: center;
 
+    margin: 0px !important;
+    padding: 0px !important;
+
     background-color: #181717;
 
     height: 100vh;
@@ -60,7 +63,7 @@ export const ContainerCentral = styled.div`
     height: 70vh;
     width: 1200px;
     
-    border: 2px solid white;
+    /* border: 2px solid white; */
     
 `
 
