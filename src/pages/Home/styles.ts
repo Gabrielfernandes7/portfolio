@@ -1,136 +1,133 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface paragrafo {
-    size?: number
+  size?: number;
 }
 
 export const Fundo = styled.div`
-    position: relative;
+  position: relative;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    margin: 0px !important;
-    padding: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
 
-    background-color: #181717;
+  background-color: #181717;
 
-    height: 100vh;
-    width: 100vw;
+  height: 100vh;
+  width: 100vw;
 
-    font-size: 20px;
-    color: #FFFFFF;
+  font-size: 20px;
+  color: #ffffff;
 
-    overflow: hidden;
+  overflow-x: hidden;
 
-`
+  .p-button {
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    height: 40px;
+  }
+`;
 
 export const Header = styled.div`
-    position: absolute;
+  position: absolute;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    
-    border: 1px solid white;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
 
-    height: 80px;
-    width: 100%;
+  border: 1px solid white;
 
-    top: 0;
+  height: 80px;
+  width: 100%;
 
+  top: 0;
+
+  text-align: center;
+
+  h4 {
     text-align: center;
-
-    h4 {
-        text-align: center;
-    }
-`
+  }
+`;
 
 export const H4 = styled.h4`
-    @media (max-width: 816px) {
-        visibility: hidden;
-    }
-`
+  @media (max-width: 816px) {
+    visibility: hidden;
+  }
+`;
 
 export const ContainerCentral = styled.div`
+  position: relative;
 
-    position: relative;
-    
-    padding: 20px;
+  padding: 20px;
 
-    height: 70vh;
-    width: 1200px;
-    
-    /* border: 2px solid white; */
-    
-`
+  height: 70vh;
+  width: 1200px;
 
+  /* border: 2px solid white; */
+`;
 
 export const Paragrafo = styled.p<paragrafo>`
-  font-size: ${props => props.size}px;
-`
+  font-size: ${(props) => props.size}px;
+`;
 
 export const ContainerIcons = styled.div`
-    padding-top: 20px;
-    margin-right: 20px;
-    padding-right: 20px;
+  padding-top: 20px;
+  margin-right: 20px;
+  padding-right: 20px;
 
-    a {
-        text-decoration: none;
-        color: inherit;
+  a {
+    text-decoration: none;
+    color: inherit;
 
-        margin-left: 20px;
-    }
-    
-`
+    margin-left: 20px;
+  }
+`;
 
 export const ProjetoContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+  text-align: center;
 
-    text-align: center;
+  position: relative;
 
-    position: relative;
+  height: 300px;
+  width: 300px;
 
-    height: 300px;
-    width: 300px;
+  border: 2px solid white;
 
-    border: 2px solid white;
+  background-color: black;
 
-    background-color: black;
+  h2 {
+    margin-bottom: 40px;
+  }
 
-    h2 {
-        margin-bottom: 40px;
-    }
+  cursor: pointer;
+  transition: background-color 0.5s ease;
 
-    cursor: pointer;
-    transition: background-color 0.5s ease;
-
-    :hover {
-        background-color: #6b6a6a;
-    }
-    
-
-`
+  :hover {
+    background-color: #6b6a6a;
+  }
+`;
 
 export const SliderContainer = styled.div`
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    
+  position: absolute;
+  bottom: 0;
+  left: 0;
 
-    background-color: black;
+  background-color: black;
 
-    width: 100%;
+  width: 100%;
 
-    box-sizing: border-box;
-    margin-top: 100px;
-    padding: 20px;
+  box-sizing: border-box;
+  margin-top: 100px;
+  padding: 20px;
 
-    border: 2px solid white;
-`
+  border: 2px solid white;
+`;
