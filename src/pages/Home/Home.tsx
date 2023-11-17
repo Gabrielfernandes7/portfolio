@@ -309,10 +309,17 @@ const Home = () => {
           </a>
         </ContainerIcons>
         <div className="card">
-          <Accordion>{createDynamicTabs()}</Accordion>
+          <Accordion
+            style={{ boxSizing: "border-box", marginBottom: 20, marginTop: 20 }}
+          >
+            {createDynamicTabs()}
+          </Accordion>
         </div>
         <div className="card">
-          <Accordion>{competencias()}</Accordion>
+          <Accordion
+          >
+            {competencias()}
+          </Accordion>
         </div>
       </ContainerCentral>
     </Fundo>

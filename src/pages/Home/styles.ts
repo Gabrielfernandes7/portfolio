@@ -24,6 +24,8 @@ export const Fundo = styled.div`
 
   overflow-x: hidden;
 
+  /* margin-bottom: 30px !important; */
+
   .p-button {
     margin-right: 1rem;
     margin-bottom: 2rem;
