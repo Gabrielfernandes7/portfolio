@@ -45,6 +45,48 @@ const Home = () => {
       // git: ""
     },
     {
+      titulo: "Aplicativo projeto indígenas",
+      descricao:
+        "Aplicativo feito com o framework Flutter, para o projeto indígenas da organização Adelco.",
+      demonstracao: "https://youtu.be/hUpfe-clK38",
+      // git: "https://github.com/lincolnzera1/Kotlin-bluetooth-arduino",
+    },
+    {
+      titulo: "Site Lit alunos",
+      descricao:
+        "Aplicativo feito com o biblioteca ReactTS, para divulgação dos projetos dos bolsistas do LIT.",
+      demonstracao: "https://youtu.be/gdgw3TPU7l0",
+      git: "https://github.com/lincolnzera1/Lit-feed",
+    },
+    {
+      titulo: "CRUD com java e Spring Boot",
+      descricao:
+        "Aprimorando os conhecimentos em java, mexendo com estrutura de dados.",
+      demonstracao: "https://youtu.be/lAbrlbMngzU",
+      git: "https://github.com/lincolnzera1/Java-Spring-Boot-CRUD-Application",
+    },
+    {
+      titulo: "Estrutura de dados com Java",
+      descricao:
+        "Aprimorando os conhecimentos em java, mexendo com estrutura de dados.",
+      // demonstracao: "https://youtu.be/XT8551M75ho",
+      git: "https://github.com/lincolnzera1/Estrutura-de-dados-com-Java",
+    },
+    {
+      titulo: "Calculadora feita com Java e Swing",
+      descricao:
+        "Aprimorando conhecimento no Java básico criando uma calculadora com a interface gráfica swing.",
+      // demonstracao: "https://youtu.be/XT8551M75ho",
+      git: "https://github.com/lincolnzera1/Super-Calculadora",
+    },
+    {
+      titulo: "Kotlin Motivation App",
+      descricao:
+        "Aplicativo que escolhe uma frase motivadora para o usuário, feito em Kotlin",
+      // demonstracao: "https://youtu.be/XT8551M75ho",
+      git: "https://github.com/lincolnzera1/Motivation-APP",
+    },
+    {
       titulo: "Oficinas 4.0",
       descricao:
         "Desenvolvedor Flutter/Dart.\n Desenvolvedor ReactJs & Node.js.",
@@ -68,20 +110,7 @@ const Home = () => {
         "https://www.youtube.com/watch?v=XT8551M75ho&ab_channel=starscream",
       git: "https://github.com/lincolnzera1/Kotlin-bluetooth-arduino",
     },
-    {
-      titulo: "Aplicativo projeto indígenas",
-      descricao:
-        "Aplicativo feito com o framework Flutter, para o projeto indígenas da organização Adelco.",
-      demonstracao: "https://youtu.be/hUpfe-clK38",
-      // git: "https://github.com/lincolnzera1/Kotlin-bluetooth-arduino",
-    },
-    {
-      titulo: "Site Lit alunos",
-      descricao:
-        "Aplicativo feito com o biblioteca ReactTS, para divulgação dos projetos dos bolsistas do LIT.",
-      demonstracao: "https://youtu.be/gdgw3TPU7l0",
-      git: "https://github.com/lincolnzera1/Lit-feed",
-    },
+
     {
       titulo: "App Provérbio do dia",
       descricao:
@@ -155,21 +184,23 @@ const Home = () => {
 
   const createDynamicTabs = () => {
     return (
-      <AccordionTab header="Projetos">
+      <AccordionTab header={`Projetos (${projetos.length})`}>
         {/* Agrupar todos os parágrafos dentro de um único elemento div */}
         <div>
           {projetos.map((projeto, index) => (
             <div key={index} className="m-0">
               <h3>{projeto.titulo}:</h3>
               <p>{projeto.descricao}</p>
-              <Button
-                onClick={() => {
-                  window.open(projeto.demonstracao, "_blank");
-                }}
-                severity="secondary"
-                outlined
-                label="Demo"
-              />
+              {projeto.demonstracao ? (
+                <Button
+                  onClick={() => {
+                    window.open(projeto.demonstracao, "_blank");
+                  }}
+                  severity="secondary"
+                  outlined
+                  label="Demo"
+                />
+              ) : null}
               {projeto.git ? (
                 <Button
                   onClick={() => {
@@ -191,15 +222,83 @@ const Home = () => {
     );
   };
 
+  const competencias = () => {
+    return (
+      <AccordionTab header={`Skills (16)`}>
+        {/* Agrupar todos os parágrafos dentro de um único elemento div */}
+        <div className="imagensMae">
+          <div
+            className="imagens"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-around",
+            }}
+          >
+            <img src="https://skillicons.dev/icons?i=react" />
+            <img src="https://skillicons.dev/icons?i=ts" />
+            <img src="https://skillicons.dev/icons?i=js" />
+            <img src="https://skillicons.dev/icons?i=vite" />
+          </div>
+
+          <div
+            className="imagens"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-around",
+            }}
+          >
+            <img src="https://skillicons.dev/icons?i=java" />
+            <img src="https://skillicons.dev/icons?i=spring" />
+            <img src="https://skillicons.dev/icons?i=mysql" />
+            <img src="https://skillicons.dev/icons?i=mongodb" />
+          </div>
+        </div>
+        <div className="imagensMae">
+          <div
+            className="imagens"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-around",
+            }}
+          >
+            <img src="https://skillicons.dev/icons?i=flutter" />
+            <img src="https://skillicons.dev/icons?i=dart" />
+            <img src="https://skillicons.dev/icons?i=firebase" />
+            <img src="https://skillicons.dev/icons?i=vscode" />
+          </div>
+          <div
+            className="imagens"
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-around",
+            }}
+          >
+            <img src="https://skillicons.dev/icons?i=vue" />
+            <img src="https://skillicons.dev/icons?i=html" />
+            <img src="https://skillicons.dev/icons?i=css" />
+            <img src="https://skillicons.dev/icons?i=github" />
+          </div>
+        </div>
+      </AccordionTab>
+    );
+  };
+
   return (
     <Fundo>
       <ContainerCentral>
         <Paragrafo size={40}>Guilherme Lincoln</Paragrafo>
         <Paragrafo>
-          Olá! Eu sou desenvolvedor Front-end com 1+ anos de experiência. Tenho
-          experiência atuando em projetos utilizando o Framework Flutter com a
-          linguagem Dart e a biblioteca React, com as linguagens Javascript e
-          Typescript.
+          Olá! Sou um desenvolvedor Full Stack com dois anos de experiência.
+          Atuei em projetos utilizando a biblioteca React com a linguagem
+          TypeScript e o framework Flutter com a linguagem Dart. Também tenho
+          experiência na criação de backends utilizando Java com Spring Boot,
+          Node.js com JavaScript e Flask com Python. Estou entusiasmado para
+          aplicar meus conhecimentos e habilidades em uma nova oportunidade como
+          desenvolvedor junior.
         </Paragrafo>
         <ContainerIcons>
           <a href="#" onClick={handleGithub}>
@@ -211,6 +310,9 @@ const Home = () => {
         </ContainerIcons>
         <div className="card">
           <Accordion>{createDynamicTabs()}</Accordion>
+        </div>
+        <div className="card">
+          <Accordion>{competencias()}</Accordion>
         </div>
       </ContainerCentral>
     </Fundo>

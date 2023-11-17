@@ -32,6 +32,19 @@ export const Fundo = styled.div`
     /* width: 40px; */
     
   }
+
+  .imagens img{
+    height: 80px;
+    margin-bottom: 2rem;
+
+    @media (max-width: 450px) {
+      height: 50px;
+    }
+  }
+
+  .imagensMae {
+    /* display: flex; */
+  }
 `;
 
 export const Header = styled.div`
