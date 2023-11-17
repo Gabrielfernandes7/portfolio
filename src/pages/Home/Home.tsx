@@ -19,6 +19,7 @@ import Print3app from "../../assets/print3app.jpeg";
 // primereact
 import { Accordion, AccordionTab } from "primereact/accordion";
 import { Button } from "primereact/button";
+import { Divider } from "primereact/divider";
 
 const Home = () => {
   const handleLinkedin = (e: any) => {
@@ -167,7 +168,7 @@ const Home = () => {
                 }}
                 severity="secondary"
                 outlined
-                label="Demonstração"
+                label="Demo"
               />
               {projeto.git ? (
                 <Button
@@ -182,6 +183,7 @@ const Home = () => {
               {projeto.gitBack ? (
                 <Button severity="secondary" outlined label="Código Backend" />
               ) : null}
+              <Divider />
             </div>
           ))}
         </div>

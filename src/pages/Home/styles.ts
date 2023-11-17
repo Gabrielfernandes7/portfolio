@@ -28,6 +28,9 @@ export const Fundo = styled.div`
     margin-right: 1rem;
     margin-bottom: 2rem;
     height: 40px;
+
+    /* width: 40px; */
+    
   }
 `;
 
