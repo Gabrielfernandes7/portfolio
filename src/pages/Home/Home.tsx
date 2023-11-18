@@ -37,9 +37,9 @@ const Home = () => {
 
   const projetos = [
     {
-      titulo: "Projeto Adelco",
+      titulo: "Site do Projeto indígenas",
       descricao:
-        "Aplicativo feito com a biblioteca ReactTS, para o projeto indígenas da organização Adelco.",
+        "Estratégias tecnológicas para a coleta e análise de informações como subsídio à elaboração de políticas públicas e a divulgação da luta de povos indígenas",
       demonstracao:
         "https://www.youtube.com/watch?v=A8b27nAITpA&ab_channel=starscream",
       // git: ""
@@ -47,7 +47,7 @@ const Home = () => {
     {
       titulo: "Aplicativo projeto indígenas",
       descricao:
-        "Aplicativo feito com o framework Flutter, para o projeto indígenas da organização Adelco.",
+        "Estratégias tecnológicas para a coleta e análise de informações como subsídio à elaboração de políticas públicas e a divulgação da luta de povos indígenas.",
       demonstracao: "https://youtu.be/hUpfe-clK38",
       // git: "https://github.com/lincolnzera1/Kotlin-bluetooth-arduino",
     },
@@ -88,8 +88,7 @@ const Home = () => {
     },
     {
       titulo: "Oficinas 4.0",
-      descricao:
-        "Desenvolvedor Flutter/Dart.\n Desenvolvedor ReactJs & Node.js.",
+      descricao: "Sistema de monitoramento IoT para hotéis",
       demonstracao: "https://youtube.com/shorts/IdNKacMWh3Y",
       demonstracao2: "https://youtu.be/UUYxWCjy7mU",
       gitFront: "https://github.com/lincolnzera1/infinity-power-project",
@@ -102,15 +101,6 @@ const Home = () => {
       demonstracao: "https://youtu.be/JFGyK0pN4XU",
       git: "https://github.com/lincolnzera1/Flutter-esptouch-websocket",
     },
-    {
-      titulo: "Carrinho bluetooth",
-      descricao:
-        "Controlando carrinho com arduino usando aplicativo feito em Kotlin",
-      demonstracao:
-        "https://www.youtube.com/watch?v=XT8551M75ho&ab_channel=starscream",
-      git: "https://github.com/lincolnzera1/Kotlin-bluetooth-arduino",
-    },
-
     {
       titulo: "App Provérbio do dia",
       descricao:
@@ -199,6 +189,16 @@ const Home = () => {
                   severity="secondary"
                   outlined
                   label="Demo"
+                />
+              ) : null}
+              {projeto.demonstracao2 ? (
+                <Button
+                  onClick={() => {
+                    window.open(projeto.demonstracao, "_blank");
+                  }}
+                  severity="secondary"
+                  outlined
+                  label="Demo2"
                 />
               ) : null}
               {projeto.git ? (
@@ -316,10 +316,7 @@ const Home = () => {
           </Accordion>
         </div>
         <div className="card">
-          <Accordion
-          >
-            {competencias()}
-          </Accordion>
+          <Accordion>{competencias()}</Accordion>
         </div>
       </ContainerCentral>
     </Fundo>
