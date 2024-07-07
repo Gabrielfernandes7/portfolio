@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Slider from "react-slick";
-import Modal from "../../components/Moda";
+import Modal from "../../components/Modal";
 import { ProjetoContainer } from "../Home/styles";
 
 interface SliderProps {
@@ -47,8 +47,6 @@ const ImageSlider: React.FC<ProjetoProps> = ({ slides }) => {
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [tituloModal, setTituloModal] = useState<string>("");
-  const [variableFromChild, setVariableFromChild] = useState(false);
-
 
   function handleModalOpen(e: string) {
     setIsOpen(!isOpen);
@@ -74,7 +72,6 @@ const ImageSlider: React.FC<ProjetoProps> = ({ slides }) => {
                 <p key={lineIndex} style={{ marginTop: -150 }}>{line}</p>
               ))}
             </ProjetoContainer>
-            {/* <img src={image} alt={`slide-${index}`} /> */}
           </div>
         ))}
       </Slider>

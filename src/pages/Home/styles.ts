@@ -24,15 +24,10 @@ export const Fundo = styled.div`
 
   overflow-x: hidden;
 
-  /* margin-bottom: 30px !important; */
-
   .p-button {
     margin-right: 1rem;
     margin-bottom: 2rem;
     height: 40px;
-
-    /* width: 40px; */
-    
   }
 
   .imagens img{
@@ -42,10 +37,6 @@ export const Fundo = styled.div`
     @media (max-width: 450px) {
       height: 50px;
     }
-  }
-
-  .imagensMae {
-    /* display: flex; */
   }
 `;
 
@@ -84,8 +75,6 @@ export const ContainerCentral = styled.div`
 
   height: 70vh;
   width: 1200px;
-
-  /* border: 2px solid white; */
 `;
 
 export const Paragrafo = styled.p<paragrafo>`
